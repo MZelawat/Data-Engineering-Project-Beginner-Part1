@@ -77,7 +77,7 @@ conn = psycopg2.connect(
     password="YOUR_PASSWORD"  # Replace with your actual password
 )
 ```
-Link:[Python Script]: (https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Python%20script)
+Link:[Python]: (https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Python%20script)
 
 ## Step 6.2:
 Connect Python to PostgreSQL
