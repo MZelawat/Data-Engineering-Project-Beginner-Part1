@@ -55,7 +55,8 @@ Follow these quick steps:
 Create Project Folder & CSV
 1. Create a folder for your project, e.g., on Desktop (name: ETL_Project)
 2. Inside the folder, create/paste a CSV file called student_exam_scores.csv 
-Link: [Data](https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Data)
+
+[Data](https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Data)
 
 ## Step 5:
 Setup Python to run PostgreSQL (in VS Code)
@@ -77,7 +78,8 @@ conn = psycopg2.connect(
     password="YOUR_PASSWORD"  # Replace with your actual password
 )
 ```
-Link:[Python]: (https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Python%20script)
+[Python Script](https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Python%20script)
+
 
 ## Step 6.2:
 Connect Python to PostgreSQL
@@ -94,7 +96,7 @@ cur.execute (
 conn.commit()
 ```
 ## Note: You can define variable name as per your naming convention like insted cur you can put cur_sql
-Link:[Python Script]: (https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Python%20script)
+[Python Script](https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Python%20script)
 
 ## Step 6.3:
 Connect Python to PostgreSQL
@@ -113,4 +115,4 @@ with open('ETL_Project/student_exam_scores.csv','r') as f:
     conn.close()
     print("CSV Data loaded into postgreSQL successfully!")
 ```
-Link:[Python Script]: (https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Python%20script)
+[Python Script](https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Python%20script)
