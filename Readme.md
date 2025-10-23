@@ -75,7 +75,8 @@ conn = psycopg2.connect(
     database="etl_project",
     user="postgres",
     password="YOUR_PASSWORD"  # Replace with your actual password
-)```
+)
+```
 Link:[Python Script]: https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/commit/e9064d071e477718a13f26d6d27d5a2eef5f7f08
 
 ## Step 6.2:
@@ -90,7 +91,8 @@ cur.execute (
     attendance_percent float(4),
     previous_scores float(4),
     exam_score float(4))""")
-conn.commit()```
+conn.commit()
+```
 ## Note: You can define variable name as per your naming convention like insted cur you can put cur_sql
 Link:[Python Script]: https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/commit/e9064d071e477718a13f26d6d27d5a2eef5f7f08
 
@@ -109,5 +111,6 @@ with open('ETL_Project/student_exam_scores.csv','r') as f:
         conn.commit()
     cur.close()
     conn.close()
-    print("CSV Data loaded int postgreSQL Successfully!")```
+    print("CSV Data loaded int postgreSQL Successfully!")
+```
 Link:[Python Script]: https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/commit/e9064d071e477718a13f26d6d27d5a2eef5f7f08
