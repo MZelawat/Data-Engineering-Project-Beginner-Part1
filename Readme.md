@@ -6,9 +6,9 @@ Build a simple ETL pipeline that:
 
     1.Extracts data from a CSV file
 
-    2.Transforms it using SQL
+    2.Transforms it using SQL via Python script
 
-    3.Loads it into PostgreSQL
+    3.Loads it into PostgreSQL database
 
 ![](https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/blob/main/ETL.jpg)
 
@@ -36,10 +36,26 @@ Recommended Extensions: Python (by Microsoft)
 
 ## Step 1:
 PostgreSQL Setup
-
+1. Go to the official PostgreSQL website
+2. Choose your operating system (Windows, macOS, or Linux).
+3. Download and run the installer.
+4. During installation:
+    Set your password for the default postgres user (you’ll use it later).
+    Note the port number (default: 5432).
+5. Make sure pgAdmin is selected in the installation options (if not, we will do it in step 2).
 
 ## Step 2:
-
+pgAdmin GUI Setup
+pgAdmin is a GUI tool for managing your PostgreSQL databases. It helps you visually create tables, run queries, and explore data without always using command line commands.
+1. Launch pgAdmin (it comes with PostgreSQL if you selected it during install).
+2. When prompted, set a master password — this protects your saved connections.
+3. Click on “Add New Server”:
+    Name: PostgreSQL Local
+    Host name/address: localhost
+    Port: 5432
+    Username: postgres
+    Password: (the one you set during installation)
+4. Click Save — you’re now connected to your local PostgreSQL server
 
 
 ## Step 3:
@@ -119,3 +135,10 @@ with open('ETL_Project/student_exam_scores.csv','r') as f:
 ```
 [Python Script](https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Python%20script)
 
+## Step 7:
+Once you run the script (python etl_project.py), it will:
+1. Create the STUD_S table
+2. Load CSV data into PostgreSQL
+3. At last you can check the table STUD_S has been created in Pgadmin database and has all the data as CSV contains
+
+### This is your first working ETL pipeline!
