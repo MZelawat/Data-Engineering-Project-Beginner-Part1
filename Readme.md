@@ -10,6 +10,8 @@ Build a simple ETL pipeline that:
 
     3.Loads it into PostgreSQL
 
+![]
+
 ## Prerequisites
 Before running this ETL project, make sure you have the following installed:
 
@@ -116,3 +118,4 @@ with open('ETL_Project/student_exam_scores.csv','r') as f:
     print("CSV Data loaded into postgreSQL successfully!")
 ```
 [Python Script](https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/tree/main/Python%20script)
+
