@@ -10,7 +10,7 @@ Build a simple ETL pipeline that:
 
     3.Loads it into PostgreSQL
 
-![]
+![](https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/blob/main/ETL.jpg)
 
 ## Prerequisites
 Before running this ETL project, make sure you have the following installed:
