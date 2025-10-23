@@ -1,7 +1,11 @@
 import psycopg2
 import csv
 
-conn=psycopg2.connect (database='etl_project', user='postgres', password='Mayank@2106', host='localhost', port='5432')
+conn=psycopg2.connect (database='etl_project', 
+                       user='postgres', 
+                       password='YOUR_PASSWORD'  # Replace with your actual password, 
+                       host='localhost', 
+                       port='5432')
 cur=conn.cursor()
 
 cur.execute("""
