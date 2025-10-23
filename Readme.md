@@ -60,24 +60,29 @@ Link: [Data](https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1
 ## Step 5:
 Setup Python to run PostgreSQL (in VS Code)
 We’ll use psycopg2, a simple PostgreSQL connector for Python.
-1. Install psycopg2 (run in Terminal):'''pip install psycopg2-binary'''
+1. Install psycopg2 (run in Terminal):
+```bash 
+pip install psycopg2-binary
+```
 2. Create a Python script inside your project folder: (ETL_Project/ETL_Project.py)
 
 ## Step 6.1:
 Connect Python to PostgreSQL
 In your Python script (etl_project.py), establish the connection:
-<conn = psycopg2.connect(
+```python
+conn = psycopg2.connect(
     host="localhost",
     database="etl_project",
     user="postgres",
     password="YOUR_PASSWORD"  # Replace with your actual password
-)>
-Link:[Python Script][Python Script]
+)```
+Link:[Python Script]: https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/commit/e9064d071e477718a13f26d6d27d5a2eef5f7f08
 
 ## Step 6.2:
 Connect Python to PostgreSQL
 In your Python script (etl_project.py), create a table in PostgreSQL database so that we can bring the data from csv to this table:
-<cur=conn.cursor() 
+```python
+cur=conn.cursor() 
 cur.execute (
     """CREATE TABLE IF NOT EXISTS STUD_S (student_id VARCHAR(10) PRIMARY KEY, 
     hours_studied float(4),
@@ -85,14 +90,15 @@ cur.execute (
     attendance_percent float(4),
     previous_scores float(4),
     exam_score float(4))""")
-conn.commit()>
+conn.commit()```
 ## Note: You can define variable name as per your naming convention like insted cur you can put cur_sql
-Link:[Python Script][Python Script]
+Link:[Python Script]: https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/commit/e9064d071e477718a13f26d6d27d5a2eef5f7f08
 
 ## Step 6.3:
 Connect Python to PostgreSQL
 Now th table has been created, we will insert the data from csv to the table we just created STUD_S
-<with open('ETL_Project/student_exam_scores.csv','r') as f:
+```python
+with open('ETL_Project/student_exam_scores.csv','r') as f:
     reader=csv.DictReader(f)
     for row in reader:
         cur.execute("""
@@ -103,8 +109,5 @@ Now th table has been created, we will insert the data from csv to the table we 
         conn.commit()
     cur.close()
     conn.close()
-    print("CSV Data loaded int postgreSQL Successfully!")
->
-Link:[Python Script][Python Script]
-
-[Python Script]: https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/commit/e9064d071e477718a13f26d6d27d5a2eef5f7f08
+    print("CSV Data loaded int postgreSQL Successfully!")```
+Link:[Python Script]: https://github.com/MZelawat/Data-Engineering-Project-Beginner-Part1/commit/e9064d071e477718a13f26d6d27d5a2eef5f7f08
